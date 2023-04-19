@@ -1,0 +1,81 @@
+import { Cliente } from './cliente';
+
+export const CLIENTES: Cliente[] = [
+  {
+    id: 1,
+    nombre: 'Flavio',
+    apellido: 'Armijos',
+    email: 'flavio@gmail.com',
+    createAt: '2023-04-17',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+  {
+    id: 2,
+    nombre: 'Marjorie',
+    apellido: 'Suing',
+    email: 'marjo@gmail.com',
+    createAt: '2023-04-16',
+  },
+];

@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class FormComponent implements OnInit {
   cliente: Cliente = new Cliente();
   titulo: String = 'Nuevo cliente';
+  errores: string[] = [];
 
   constructor(
     private clienteService: ClienteService,
@@ -32,24 +33,38 @@ export class FormComponent implements OnInit {
     });
   }
   public create(): void {
-    this.clienteService.create(this.cliente).subscribe((cliente) => {
-      this.router.navigate(['/clientes']);
-      Swal.fire(
-        'Nuevo cliente',
-        `Cliente ${cliente.nombre} creado con éxito`,
-        'success'
-      );
-    });
+    this.clienteService.create(this.cliente).subscribe(
+      (cliente) => {
+        this.router.navigate(['/clientes']);
+        Swal.fire(
+          'Nuevo cliente',
+          `Cliente ${cliente.nombre} creado con éxito`,
+          'success'
+        );
+      },
+      (err) => {
+        this.errores = err.error.errors as string[];
+        console.error(err.error.errors);
+        console.error(err.error.status);
+      }
+    );
   }
 
   public update(): void {
-    this.clienteService.update(this.cliente).subscribe((cliente) => {
-      this.router.navigate(['/clientes']);
-      Swal.fire(
-        'Cliente actualizado',
-        `Cliente ${cliente.nombre} actualizado con éxito`,
-        'success'
-      );
-    });
+    this.clienteService.update(this.cliente).subscribe(
+      (json) => {
+        this.router.navigate(['/clientes']);
+        Swal.fire(
+          'Cliente actualizado',
+          `Cliente ${json.cliente.nombre} actualizado con éxito`,
+          'success'
+        );
+      },
+      (err) => {
+        this.errores = err.error.errors as string[];
+        console.error(err.error.errors);
+        console.error(err.error.status);
+      }
+    );
   }
 }

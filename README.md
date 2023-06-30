@@ -1,6 +1,11 @@
 # ClientesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+Frontend de API REST hecha en spring - boot
+
+## Importante
+
+- Necesita desplegar el backend clientes-app-spring en este repo
+  This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
 ## Development server
 
